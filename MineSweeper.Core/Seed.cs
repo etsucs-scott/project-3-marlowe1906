@@ -2,25 +2,17 @@
 {
     public class Seed
     {
-        public int Get()
+        public string Get()
         {
             string seed = string.Empty;
-            Console.Write("Please enter a numarical 6 digit seed or click enter to use a random one: ");
+            Console.WriteLine("Please enter a numarical 6 digit seed or click enter to use a random one: ");
             seed = Console.ReadLine();
             if (string.IsNullOrEmpty(seed) || seed.Length != 6)
             {
                 DateTime time = DateTime.Now;
                 seed = DateTime.Now.ToString("ffffff");
             }
-            if (int.TryParse(seed, out int SeedNum))
-            {
-                return SeedNum;
-            }
-            else
-            {
-                Console.WriteLine("Seed must be numarical");
-                return -1;
-            }
+            return seed;
         }
     }
 }

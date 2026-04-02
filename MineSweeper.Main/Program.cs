@@ -1,7 +1,10 @@
 ﻿using MineSweeper.Core;
 
 Seed seed = new Seed();
+MapSize map = new MapSize();
 
-int num = seed.Get();
+string num = seed.Get();
+int sizing = map.Get();
 
 Console.WriteLine(num);
+Console.WriteLine(sizing);
