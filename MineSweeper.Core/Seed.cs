@@ -2,17 +2,29 @@
 {
     public class Seed
     {
-        public string Get()
+        // returns an int of 6 digits
+        public int Get(string seed)
         {
-            string seed = string.Empty;
-            Console.WriteLine("Please enter a numarical 6 digit seed or click enter to use a random one: ");
-            seed = Console.ReadLine();
             if (string.IsNullOrEmpty(seed) || seed.Length != 6)
             {
-                DateTime time = DateTime.Now;
                 seed = DateTime.Now.ToString("ffffff");
+
+                //Get rid of leading 0s
+                int num = int.Parse(seed);
+                seed = num.ToString();
+           
+                while (seed.Length != 6)
+                {
+                   seed = "1" + seed;
+                }
+
+                num = int.Parse(seed);
+                return num;
             }
-            return seed;
+            else
+            {
+                return -1;
+            }
         }
     }
 }

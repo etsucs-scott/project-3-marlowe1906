@@ -6,20 +6,19 @@ namespace MineSweeper.Core
 {
     public class MapSize
     {
-        public int Get()
+        // returns an int of how big the square should be 
+        public int Get(string Difficulty)
         {
-            Console.WriteLine("What difficulty do you want: easy, medium, or hard? (nothing = hard): ");
-            string Difficulty = Console.ReadLine();
             Difficulty = Difficulty.ToLower();
-            if (Difficulty == string.Empty || Difficulty == "hard")
+            if (Difficulty == string.Empty || Difficulty == "3")
             {
                 return 12;
             }
-            else if (Difficulty == "easy")
+            else if (Difficulty == "1")
             {
                 return 8;
             }
-            else if (Difficulty == "medium")
+            else if (Difficulty == "2")
             {
                 return 10;
             }
