@@ -9,7 +9,6 @@ namespace MineSweeper.Core
         // returns an int of how big the square should be 
         public int Get(string Difficulty)
         {
-            Difficulty = Difficulty.ToLower();
             if (Difficulty == string.Empty || Difficulty == "3")
             {
                 return 12;

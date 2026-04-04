@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MineSweeper.Core
 {
-    internal class Menu
+    public class Menu
     {
         public int Size;
         public int SeedValue;
